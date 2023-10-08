@@ -8,6 +8,7 @@ import Review from "../Componets/Pages/Review/Review";
 import Event from "../Componets/Pages/Event/Event";
 import Login from "../Componets/Pages/Login/Login";
 import Register from "../Componets/Pages/Register/Register";
+import Details from "../Componets/Pages/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         {
             path:'/register',
             element:<Register></Register>
+        },
+         {
+          path:'/service/:id',
+          element:<Details></Details>,
+          loader:()=>fetch('/category.json')
         }
       ]
     },

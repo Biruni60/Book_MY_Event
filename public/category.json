@@ -1,0 +1,51 @@
+  
+[
+    {
+        "id": 1,
+        "name": "Elegant Wedding",
+        "image": "https://i.ibb.co/HHBcY1n/modern-wedding-planner-laptop-copy-space.jpg",
+        "price": 5000,
+        "short_description": "A romantic and timeless wedding ceremony.",
+        "detail": "Celebrate your love story with an elegant wedding ceremony. Our experienced team of planners will ensure that every detail is perfect, from the stunning floral arrangements to the delicious cuisine. Your special day will be filled with love and joy, creating memories that will last a lifetime. Whether you dream of an intimate gathering or a grand celebration, we will make your wedding dreams come true. Our professional photographers will capture every moment, from the exchange of vows to the first dance, so you can relive the magic for years to come. We offer a range of packages to suit your budget, and our dedicated staff will work closely with you to create a personalized experience that reflects your unique style and preferences. Trust us to make your wedding day an unforgettable celebration of your love."
+    },
+    {
+        "id": 2,
+        "name": "Birthday Bash",
+        "image": "https://i.ibb.co/TWQ2yxv/couples-celebrating-birthday.jpg",
+        "price": 1000,
+        "short_description": "A fun-filled birthday party for all ages.",
+        "detail": "Throw the ultimate birthday bash with our party planning services. We provide everything you need to make your birthday celebration a blast. From themed decorations to entertainment options, we've got you covered. Whether you're turning 5 or 50, we'll ensure your birthday is a day to remember. Our talented team of decorators will transform your venue into a fantasy world, bringing your birthday theme to life. We offer a variety of entertainment options, including magicians, clowns, and live bands, to keep your guests entertained. And don't forget the delicious food! Our catering team can create a custom menu that caters to all tastes and dietary restrictions. Your birthday party will be stress-free and filled with laughter, leaving you with wonderful memories to cherish."
+    },
+    {
+        "id": 3,
+        "name": "Silver Anniversary",
+        "image": "https://i.ibb.co/vky4GGC/6700111-1.jpg",
+        "price": 3000,
+        "short_description": "Celebrate 25 years of love and commitment.",
+        "detail": "Mark your 25th wedding anniversary with a silver anniversary celebration that reflects the enduring love you share. Our team will help you plan a memorable event that pays tribute to your journey together. With personalized touches and heartfelt moments, your silver anniversary will be a testament to your enduring commitment. From elegant silver decorations to a slideshow of your life's journey together, we'll create a beautiful atmosphere that honors your love story. Our skilled chefs will craft a special menu that includes your favorite dishes, and our sommelier can recommend the perfect wines to complement the meal. We can even arrange for a live orchestra to serenade you and your guests with your favorite love songs. Your silver anniversary will be a night to remember, filled with love, laughter, and cherished memories."
+    },
+    {
+        "id": 4,
+        "name": "Engagement Extravaganza",
+        "image": "https://i.ibb.co/7YtHDBn/i-m-so-excited-shocked.jpg",
+        "price": 2000,
+        "short_description": "Announce your engagement in style.",
+        "detail": "Make your engagement announcement a memorable moment with an engagement party that dazzles. From engagement photo booths to customized invitations, we'll create an event that showcases your love and excitement. Share your joy with family and friends as you take the first step toward forever. Our event planners will work closely with you to design an engagement party that reflects your unique style and personalities. We can create a romantic garden setting with fairy lights and candles or go for a more modern and chic ambiance with a city skyline backdrop. Our photographers will capture every smile, tear, and hug, preserving the memories for a lifetime. And let's not forget the food! Our catering team will prepare a delightful menu that caters to your preferences, ensuring that your engagement party is not just an announcement but a celebration of love."
+    },
+    {
+        "id": 5,
+        "name": "Retirement Celebration",
+        "image": "https://i.ibb.co/cy4b8wq/8517884-1.jpg",
+        "price": 1500,
+        "short_description": "A farewell to a successful career.",
+        "detail": "Celebrate the end of a fulfilling career with a retirement party that honors your achievements. Whether it's a small gathering or a large retirement gala, we'll create an event that reflects your personality and accomplishments. Share stories, laughter, and well-wishes as you embark on the next chapter of your life. Our event planners will work closely with you to design a retirement celebration that captures the essence of your career and your dreams for the future. We can create a nostalgic ambiance with a slideshow of your career highlights or go for a more relaxed and casual setting for an intimate gathering of friends and colleagues. Our team will handle all the details, from invitations to decorations, so you can focus on enjoying the company of your loved ones. It's a time to reflect, celebrate, and look forward to the adventures that retirement will bring."
+    },
+    {
+        "id": 6,
+        "name": "Baby Shower Delight",
+        "image": "https://i.ibb.co/QJMxWhT/455931-PFLBEK-763-1.jpg",
+        "price": 800,
+        "short_description": "Welcome the newest addition to the family.",
+        "detail": "Celebrate the upcoming arrival of your little one with a baby shower filled with joy and anticipation. We'll help you plan a baby shower that is as sweet and charming as your baby-to-be. From adorable decorations to baby-themed treats, it's a day to shower the parents-to-be with love and well-wishes. Our baby shower specialists will assist you in creating a memorable event that perfectly captures the excitement of welcoming a new member to your family. We offer a wide range of themes, from classic pastels to trendy gender reveals, and our decorators will transform the venue into a baby wonderland. You and your guests will enjoy delightful games, delectable treats, and a warm atmosphere that celebrates this special moment in your life. Our photographers will capture the joy on your faces as you open adorable baby gifts and share laughter with friends and family. It's a day to cherish as you prepare to embark on the incredible journey of parenthood."
+    }
+]

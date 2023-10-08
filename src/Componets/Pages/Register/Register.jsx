@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext,  useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from 'react-toastify'
 const Register = () => {
     const {createUser}=useContext(AuthContext);
     const[registerError,setRegisterError]=useState('');
@@ -15,8 +15,10 @@ const Register = () => {
  setRegisterSuccess('');
  if(password.length<6){
     setRegisterError('Password should be 6 or longer');
+
     e.target.reset()
-   
+        const notify = () => toast(registerError);
+   notify();
     return;
  }
  if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)){
@@ -90,6 +92,7 @@ const Register = () => {
   </div>
   
 </div>
+<ToastContainer></ToastContainer>
         </div>
     );
 };

@@ -7,8 +7,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Navbar = () => {
     const navLink=<>
          <li className="text-xl font-semibold "><NavLink  to='/'>Home</NavLink></li>
-         <li className="text-xl font-semibold"><NavLink to='/review'>Review</NavLink></li>
-         <li className="text-xl font-semibold"><NavLink to='/event'>Book a Event</NavLink></li>
+         <li className="text-xl font-semibold"><NavLink to='/review'>Reviews</NavLink></li>
+         <li className="text-xl font-semibold"><NavLink to='/event'>Booked  Event</NavLink></li>
        
     </>
     const {user,logOut}=useContext(AuthContext);

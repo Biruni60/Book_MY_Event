@@ -8,7 +8,10 @@ import Review from "../Componets/Pages/Review/Review";
 import Event from "../Componets/Pages/Event/Event";
 import Login from "../Componets/Pages/Login/Login";
 import Register from "../Componets/Pages/Register/Register";
+import PrivateRoute from "../Componets/Pages/PrivateRoute/PrivateRoute";
 import Details from "../Componets/Pages/Details/Details";
+import PrivateBook from "../Componets/Pages/PrivateBook.jsx/PrivateBook";
+
 
 const router = createBrowserRouter([
     {
@@ -25,20 +28,23 @@ const router = createBrowserRouter([
         },
         {
             path:'/event',
-            element:<Event></Event>
+            element:<PrivateBook><Event></Event></PrivateBook>,
+            loader:()=>fetch("/category.json")
         },
         {
             path:'/login',
-            element:<Login></Login>
+            element:<Login></Login>,
+           
         },
         {
             path:'/register',
             element:<Register></Register>
         },
          {
-          path:'/service/:id',
-          element:<Details></Details>,
-          loader:()=>fetch('/category.json')
+          path:'/:id',
+          element: <PrivateRoute><Details></Details></PrivateRoute> ,
+          loader:()=>fetch("/category.json")
+        
         }
       ]
     },

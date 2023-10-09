@@ -11,6 +11,7 @@ import Register from "../Componets/Pages/Register/Register";
 import PrivateRoute from "../Componets/Pages/PrivateRoute/PrivateRoute";
 import Details from "../Componets/Pages/Details/Details";
 import PrivateBook from "../Componets/Pages/PrivateBook.jsx/PrivateBook";
+import PrivateReview from "../Componets/Pages/PrivateReview/PrivateReview";
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/review',
-            element:<Review></Review>
+            element:<PrivateReview><Review></Review></PrivateReview>
         },
         {
             path:'/event',

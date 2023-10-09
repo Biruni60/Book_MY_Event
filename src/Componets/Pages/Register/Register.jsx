@@ -1,24 +1,23 @@
 import { useContext,  useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify'
+
 const Register = () => {
-    const {createUser}=useContext(AuthContext);
+    const {createUser,profileUpdate}=useContext(AuthContext);
     const[registerError,setRegisterError]=useState('');
     const [registerSuccess,setRegisterSuccess]=useState('');
     const handleRsgister=e=>{
         e.preventDefault();
  const email=e.target.email.value;
  const password=e.target.password.value;
+ const name=e.target.name.value;
+ const photourl=e.target.photoUrl.value;
  setRegisterError('');
  setRegisterSuccess('');
  if(password.length<6){
     setRegisterError('Password should be 6 or longer');
 
     e.target.reset()
-        const notify = () => toast(registerError);
-   notify();
     return;
  }
  if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)){
@@ -30,13 +29,16 @@ const Register = () => {
   createUser(email,password)
   .then(result=>{
     console.log(result.user);
-  
-    setRegisterSuccess('User Created Successfully');
     e.target.reset();
+    setRegisterSuccess('User Created Successfully');
+    profileUpdate(name,photourl)
+    .then(()=>console.log("updated"))
+    .catch(error=>console.log(error.message))
+   
+
 })
   .catch(error=>{
     setRegisterError(error.message);
-    console.log(error.message);
   })
     }
     return (
@@ -45,12 +47,7 @@ const Register = () => {
   <figure className="md:w-1/2 h-full"><img className="" src="https://i.ibb.co/3T7XFWR/4957136-1.jpg" alt="Movie"/></figure>
   <div className="card-body">
   <div className="hero bg-base-200 h-full">
-      {
-        registerError && <p>{registerError}</p>
-      }
-      {
-        registerSuccess && <p>{registerSuccess}</p>
-      }
+  
       <form className="card-body w-full " onSubmit={handleRsgister}>
         <div className="form-control">
           <label className="label">
@@ -81,10 +78,16 @@ const Register = () => {
         </div>
         <div className="flex pt-5">
         <p>Already have a account?</p>
-        <button className="btn btn-outline text-rose-400"><Link to='/login'>Login</Link></button>
+        <Link to='/login'> <button className="btn btn-outline text-rose-400">Login</button></Link>
       
     
       </div>
+      {
+        registerError && <p className="text-red-800">{registerError}</p>
+      }
+      {
+        registerSuccess && <p className="text-green-800">{registerSuccess}</p>
+      }
       </form> 
      
 </div>
@@ -92,7 +95,6 @@ const Register = () => {
   </div>
   
 </div>
-<ToastContainer></ToastContainer>
         </div>
     );
 };

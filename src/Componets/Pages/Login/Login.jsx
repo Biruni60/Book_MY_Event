@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-   const {signInUser}=useContext(AuthContext);
+   const {signInUser,googleLogIn}=useContext(AuthContext);
    const location=useLocation();
    const navigate=useNavigate()
     const handleLogin=e=>{
@@ -20,14 +20,23 @@ e.preventDefault();
 })
  .catch(error=>console.log(error.message))
     }
+    const handleGoogleLogin=()=>{
+       googleLogIn()
+       .then(result=>{
+        console.log(result.user);
+        navigate('/')
+       } )
+       .catch(error=>console.log(error.message))
+    }
     return (
         <div>
         <div className="card md:card-side bg-base-100 ">
   <figure className="md:w-1/2 h-full"><img className="" src="https://i.ibb.co/3T7XFWR/4957136-1.jpg" alt="Movie"/></figure>
   <div className="card-body">
   <div className="hero bg-base-200 h-full">
-
+         
       <form className="card-body w-full " onSubmit={handleLogin}>
+      
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -42,10 +51,11 @@ e.preventDefault();
         </div>
         <div className="form-control mt-6">
           <button className="btn bg-rose-400 text-white"><input type="submit" value="Login" /></button>
+          <button onClick={handleGoogleLogin} className="btn btn-outline text-rose-400 mt-2">Log In With Google</button>
         </div>
         <div className="flex pt-5">
         <p>Do not have a account?</p>
-        <button className="btn btn-outline text-rose-400"><Link to='/register'>Register</Link></button>
+        <Link to='/register'> <button className="btn btn-outline text-rose-400">Register</button></Link>
       </div>
       </form> 
       

@@ -30,7 +30,7 @@ const Navbar = () => {
       </ul>
     </div>
     <img className="w-10 rounded-lg mx-2" src="https://i.ibb.co/ZTWCwFy/8041979-1.jpg"  />
-    <h2 className= "text-xl md:text-3xl text-rose-400">BOOKMYEVENT</h2>
+    <h2 className= "text-lg md:text-3xl text-rose-400">BOOKMYEVENT</h2>
   </div>
   
   <div className="navbar-center hidden lg:flex">
@@ -42,11 +42,29 @@ const Navbar = () => {
   
   {
   user?
- <div><p>{user.email}</p>  <button onClick={handleSignOut} className="btn btn-outline bg-red-400 text-white text-xl">Sign Out</button></div>
+ <div><button onClick={handleSignOut} className="btn btn-outline bg-red-400 text-white  text-base md:text-xl">log Out</button></div>
   : 
-   <button className="btn btn-outline bg-red-400 text-white text-xl"><Link to='/login'>Login</Link></button>
+   <button className="btn btn-outline bg-red-400 text-white text-base md:text-xl"><Link to='/login'>Login</Link></button>
   }
-   
+   <div>
+    {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn " onClick={()=>document.getElementById('my_modal_1').showModal()}>user</button>
+<dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+   {
+    user? <div> <p>Email:{user.email}</p>
+    <p>Name:{user.displayName}</p>
+    <img className=" w-12 h-12 rounded-lg " src={user.photoURL}  /></div>:"No User"
+   }
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+   </div>
   </div>
 </div>  
         </div>
